@@ -23,7 +23,49 @@ console.log ("o resto da divisão desse número é de:" , resultado)
 
 //exercício 3
 
-let idade = prompt( "qual a sua idade? " )
+// Pergunta a idade do usuário em anos
+let idadeAnos = prompt("Qual é a sua idade em anos?");
+
+// Converte a idade para números inteiros
+idadeAnos = parseInt(idadeAnos);
+
+// Calcula a idade em meses, dias e horas
+let idadeMeses = idadeAnos * 12;
+let idadeDias = idadeAnos * 365; // Considerando que um ano tem 365 dias
+let idadeHoras = idadeDias * 24;
+
+// Imprime as informações no console
+console.log("Sua idade em meses é: " + idadeMeses);
+console.log("Sua idade em dias é: " + idadeDias);
+console.log("Sua idade em horas é: " + idadeHoras);
+
+//fim do exercício 3
 
 
-console.log("Olá " + nome + ", você tem " + idade + " anos.");
+//exercício 4
+
+// Pergunta ao usuário dois números
+let numero1 = prompt("Digite o primeiro número:");
+let numero2 = prompt("Digite o segundo número:");
+
+// Converte os números para tipo numérico
+numero1 = parseInt(numero1);
+numero2 = parseInt(numero2);
+
+// Verifica se o primeiro número é maior que o segundo
+let maiorQue = numero1 > numero2;
+
+// Verifica se o primeiro número é igual ao segundo
+let igualA = numero1 === numero2;
+
+// Verifica se o primeiro número é divisível pelo segundo
+let divisivelPor = numero1 % numero2 === 0;
+
+// Verifica se o segundo número é divisível pelo primeiro
+let divisivelPor2 = numero2 % numero1 === 0;
+
+// Imprime os resultados
+console.log("O primeiro número é maior que o segundo? " + maiorQue);
+console.log("O primeiro número é igual ao segundo? " + igualA);
+console.log("O primeiro número é divisível pelo segundo? " + divisivelPor);
+console.log("O segundo número é divisível pelo primeiro? " + divisivelPor2);
