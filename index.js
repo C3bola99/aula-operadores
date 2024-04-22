@@ -69,3 +69,11 @@ console.log("O primeiro número é maior que o segundo? " + maiorQue);
 console.log("O primeiro número é igual ao segundo? " + igualA);
 console.log("O primeiro número é divisível pelo segundo? " + divisivelPor);
 console.log("O segundo número é divisível pelo primeiro? " + divisivelPor2);
+
+
+//escrevendo em diferentes strings
+
+let nome = prompt( "qual seu nome?" )
+let corFavorita= prompt( "qual sua cor favorita? " )
+let frase = `a cor preferida de ${nome} é ${corFavorita}`
+console.log (frase)
