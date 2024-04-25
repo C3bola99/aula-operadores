@@ -61,7 +61,56 @@ console.log('f. ', valor)
 
 //exercício 2
 
-let comidas = ['Lasanha','Panqueca','Pizza','Shoarma','Temaki']
-console.log(comidas)
-console.log("essas são minhas comidas preferidas")
+// Array com as comidas preferidas
+let minhasComidasPreferidas = ["Lasanha", "Sushi", "Pizza", "Hambúrguer", "Shoarma"];
 
+console.log("Minhas comidas preferidas:", minhasComidasPreferidas);
+console.log("Essas são as minhas comidas preferidas:\n" + minhasComidasPreferidas.join("\n"));
+let minhasComidasPreferidas = ["Lasanha", "Sushi", "Pizza", "Hambúrguer", "Tacos"];
+
+// Perguntar ao usuário uma comida preferida e substituir a segunda comida da lista
+minhasComidasPreferidas[1] = prompt("Digite uma comida que você gosta:") ?? minhasComidasPreferidas[1];
+
+// Imprimir a nova lista no console
+console.log("Nova lista de comidas preferidas:", minhasComidasPreferidas);
+
+
+//exercício 3
+
+// Criar um array vazio e armazená-lo em uma variável listaDeTarefas
+let listaDeTarefas = [];
+// Perguntar ao usuário 3 tarefas que ele precise realizar no dia e armazená-las no array
+for (let i = 0; i < 3; i++) {
+    let tarefa = prompt(`Digite a tarefa ${i + 1}:`);
+    listaDeTarefas.push(tarefa);
+}
+console.log("Lista de Tarefas:", listaDeTarefas);
+let indiceRealizada = prompt("Digite o índice da tarefa que você já realizou (0, 1 ou 2):");
+// Remover da lista o item de índice que o usuário escolheu (se o índice for válido)
+listaDeTarefas.splice(indiceRealizada >= 0 && indiceRealizada < listaDeTarefas.length ? indiceRealizada : -1, 1);
+// Imprimir a lista atualizada no console
+console.log("Lista de Tarefas atualizada:", listaDeTarefas);
+
+
+//desafios
+// Receber a frase como entrada do usuário
+let frase = prompt("Digite uma frase:");
+
+// Dividir a frase em palavras, ignorando os espaços em branco
+let arrayPalavras = frase.split(" ").filter(palavra => palavra !== "");
+
+// Imprimir o array resultante no console
+console.log(arrayPalavras);
+
+
+//desafio2
+
+// Array fornecido
+let frutas = ["Banana", "Morango", "Abacaxi", "Laranja", "Ameixa"];
+
+// Encontrar o índice da palavra "Abacaxi"
+let indiceAbacaxi = frutas.indexOf("Abacaxi");
+
+// Imprimir o índice e o tamanho do array
+console.log("Índice da palavra 'Abacaxi':", indiceAbacaxi);
+console.log("Tamanho do array:", frutas.length);
